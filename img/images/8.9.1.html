@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../../function.js"></script>
+	<script src="../../animate.js"></script>
+	<script>
+		$(function(){
+			var ones=$(".one",$(".box")[0]);
+			// for (var i = 0; i < ones.length; i++) {
+			// 	ones[i].index=i;
+			// 	ones[i].onmouseover=function(){
+			// 		animate($(".bt",this)[0],{width:400},500);
+			// 		animate($(".bl",this)[0],{height:400},500);
+			// 		animate($(".br",this)[0],{height:400},500);
+			// 		animate($(".bb",this)[0],{width:400},500);
+			// 	}
+			// 	ones[i].onmouseout=function(){
+			// 		animate($(".bt",this)[0],{width:0},500);
+			// 		animate($(".bl",this)[0],{height:0},500);
+			// 		animate($(".br",this)[0],{height:0},500);
+			// 		animate($(".bb",this)[0],{width:0},500);
+			// 	}
+			// }
+			for(var i=0;i<ones.length;i++){
+				ones[i].onmouseover=function(){
+					animate($(".bt",this)[0],{width:400},500);
+					animate($(".br",this)[0],{height:400},500);
+					animate($(".bb",this)[0],{width:400},500);
+					animate($(".bl",this)[0],{height:400},500);
+				}
+				ones[i].onmouseout=function(){
+					animate($(".bt",this)[0],{width:0},500);
+					animate($(".br",this)[0],{height:0},500);
+					animate($(".bb",this)[0],{width:0},500);
+					animate($(".bl",this)[0],{height:0},500);
+				}
+			}
+			// for(var i=0;i<ones.length;i++){
+			// 	ones[i].index=i;
+			// 	ones[i].onmouseover=function(){
+			// 		animate($(".bt",ones[this.index])[0],{width:400},500,function(){
+			// 			animate($(".br",ones[this.index])[0],{height:400},500,function(){
+			// 				animate($(".bb",ones[this.index])[0],{width:400},500,function(){
+			// 					animate($(".bl",ones[this.index])[0],{height:400},500);
+			// 				});
+			// 			});
+			// 		});
+			// 	}
+			// 	ones[i].onmouseout=function(){
+			// 		animate($(".bt",this)[0],{width:0},500);
+			// 		animate($(".br",this)[0],{height:0},500);
+			// 		animate($(".bb",this)[0],{width:0},500);
+			// 		animate($(".bl",this)[0],{height:0},500);
+			// 	}
+			// }
+		})
+	</script>
+	<style>
+		.box{
+			width: 1000px;
+			height: 900px;
+			margin: 50px auto;
+			background: yellow;
+		}
+		.one{
+			width: 400px;
+			height: 400px;
+			margin-left: 100px;
+			margin-bottom: 100px;
+			position: relative;
+			overflow: hidden;
+			float: left;
+		}
+		.img-box{
+			width: 390px;
+			height: 390px;
+			overflow: hidden;
+			background: #ddd;
+			border: 5px solid #999;
+		}
+		.one .bt,.one .bl,.one .br,.one .bb{
+			width: 0;
+			height: 0;
+			position: absolute;
+		}
+		.one .bl{
+			left: 0;
+			/*top: 0;*/
+			bottom: 0;
+			border-left: 5px solid #000;
+		}
+		.one .br{
+			right: 0;
+			/*bottom: 0;*/
+			top: 0;
+			border-right: 5px solid #000;
+		}
+		.one .bt{
+			left: 0;
+			top: 0;
+			border-top: 5px solid #000;
+		}
+		.one .bb{
+			right: 0;
+			bottom: 0;
+			border-bottom: 5px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="one">
+			<div class="img-box"></div>
+			<div class="bt"></div>
+			<div class="bl"></div>
+			<div class="br"></div>
+			<div class="bb"></div>
+		</div>
+		<div class="one">
+			<div class="img-box"></div>
+			<div class="bt"></div>
+			<div class="bl"></div>
+			<div class="br"></div>
+			<div class="bb"></div>
+		</div>
+		<div class="one">
+			<div class="img-box"></div>
+			<div class="bt"></div>
+			<div class="bl"></div>
+			<div class="br"></div>
+			<div class="bb"></div>
+		</div>
+		<div class="one">
+			<div class="img-box"></div>
+			<div class="bt"></div>
+			<div class="bl"></div>
+			<div class="br"></div>
+			<div class="bb"></div>
+		</div>
+	</div>
+</body>
+</html>
